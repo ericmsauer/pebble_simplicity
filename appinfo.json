@@ -1,10 +1,10 @@
 {
-  "uuid" : "7112d624-6555-4279-89ae-c086e9369427",
-  "shortName" : "Simplicity",
-  "longName" : "Simplicity",
+  "uuid": "02cb03ea-882a-4c46-b4c7-c23fbdb7a8fb",
+  "shortName": "simplicity",
+  "longName": "simplicity",
   "companyName" : "Eric Sauer",
   "versionCode" : 1,
-  "versionLabel" : "1.0",
+  "versionLabel" : "1.0.0",
   "watchapp" : {
     "watchface" : true
   },
