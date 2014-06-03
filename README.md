@@ -1,4 +1,4 @@
-Pebble Watch Face Simplicity
+Pebble Watchface: Simplicity
 =================
 by Eric Sauer
 
