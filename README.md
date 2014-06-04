@@ -12,4 +12,3 @@ It displays:
 
 You can customize:
 - 12 or 24 hour time (Based off of your system settings)
-- Show or disable trailing zeros
