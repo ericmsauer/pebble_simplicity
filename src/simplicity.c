@@ -115,8 +115,8 @@ static void update_display(struct tm *current_time) {
 	set_container_image(&day_name_image, day_name_layer, DAY_NAME_IMAGE_RESOURCE_IDS[current_time->tm_wday], GPoint(5, 140));
 
 	//Change the date number
-	set_container_image(&date_digits_images[0], date_digits_layers[0], DATENUM_IMAGE_RESOURCE_IDS[current_time->tm_mon/10], GPoint(50, 140));
-	set_container_image(&date_digits_images[1], date_digits_layers[1], DATENUM_IMAGE_RESOURCE_IDS[current_time->tm_mon%10], GPoint(63, 140));
+	set_container_image(&date_digits_images[0], date_digits_layers[0], DATENUM_IMAGE_RESOURCE_IDS[(current_time->tm_mon+1)/10], GPoint(50, 140));
+	set_container_image(&date_digits_images[1], date_digits_layers[1], DATENUM_IMAGE_RESOURCE_IDS[(current_time->tm_mon+1)%10], GPoint(63, 140));
 	set_container_image(&date_digits_images[2], date_digits_layers[2], DATENUM_IMAGE_RESOURCE_IDS[current_time->tm_mday/10], GPoint(81, 140));
 	set_container_image(&date_digits_images[3], date_digits_layers[3], DATENUM_IMAGE_RESOURCE_IDS[current_time->tm_mday%10], GPoint(94, 140));
 	set_container_image(&date_digits_images[4], date_digits_layers[4], DATENUM_IMAGE_RESOURCE_IDS[1], GPoint(112, 140));
@@ -146,7 +146,7 @@ static void update_display(struct tm *current_time) {
 		else{
 			layer_set_hidden(bitmap_layer_get_layer(time_digits_layers[0]), false);
 		}
-		if(current_time->tm_mon/10 == 0 && !trailing_zeros)
+		if((current_time->tm_mon+1)/10 == 0 && !trailing_zeros)
 			layer_set_hidden(bitmap_layer_get_layer(date_digits_layers[0]), true);
 		else
 			layer_set_hidden(bitmap_layer_get_layer(date_digits_layers[0]), false);
